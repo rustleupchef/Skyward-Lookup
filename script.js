@@ -1,7 +1,8 @@
 let lastvalidimg = "default.png";
 function change() {
     console.log(document.getElementById("Id").value)
-    const id = document.getElementById("Id").value;
+    const id = document.getElementById("Id").value.substring(0, 6);
+    document.getElementById("Id").value = id;
     const img = new Image();
     const url = "https://skyward.springbranchisd.com/pictures/" + id + ".jpg";
     img.src = url;
